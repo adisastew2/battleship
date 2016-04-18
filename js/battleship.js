@@ -175,6 +175,7 @@ function handleFireButton() {
 
 window.onload = init;
 
+// makes enter key activate fire func
 function handleKeyPress(e) {
 	var fireButton = document.getElementById("fireButton");
 
@@ -185,3 +186,26 @@ function handleKeyPress(e) {
 	return false; 
 	}
 }
+
+// func to make gameboard clickable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
