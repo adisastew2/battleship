@@ -187,9 +187,12 @@ function handleKeyPress(e) {
 	}
 }
 
-// func to make gameboard clickable
+// make gameboard clickable
 
-
+document.addEventListener('click', function(e) {
+    model.fire(e.target.id)
+    
+});
 
 
 
