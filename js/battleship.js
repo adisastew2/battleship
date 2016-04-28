@@ -122,8 +122,13 @@ var controller = {
 		if (location) {
 			this.guesses++;
 			var hit = model.fire(location);
+			console.log(hit)
+			console.log(model.shipsSunk)
+			console.log(model.numShips)
 			if (hit && model.shipsSunk === model.numShips) { 
 				view.displayMessage("You sank all my battleships, in " + this.guesses + " guesses");
+			} else {
+				console.log("the final calculation isn't")
 			}
 		}
 	} 
@@ -191,6 +196,12 @@ function handleKeyPress(e) {
 
 document.addEventListener('click', function(e) {
     model.fire(e.target.id)
+
+    controller.guesses++
+    
+    if (model.shipsSunk === model.numShips) { 
+				view.displayMessage("You sank all my battleships, in " + controller.guesses + " guesses");
+			}
     
 });
 
